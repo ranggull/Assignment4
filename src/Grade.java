@@ -16,16 +16,16 @@ public class Grade {
 		      Assignments 0=75 points possible
 		   */
 		   
-		   double[] student1 = new double[] {44, 46, 34, 31, 68, 70, 58, 53};
-		   double[] student2 = new double[] {40, 42, 50, 48, 72, 67, 65, 69};
-		   double[] student3 = new double[] {33, 38, 44, 30, 51, 62, 49, 56};
-		   double[] student4 = new double[] {50, 45, 47, 48, 60, 58, 63, 68};
-		   double[] student5 = new double[] {30, 41, 44, 36, 46, 49, 54, 55};
-		   double[] student6 = new double[] {26, 31, 36, 32, 41, 44, 46, 42};
-		   double[] student7 = new double[] {48, 42, 47, 45, 72, 70, 66, 69};
-		   double[] student8 = new double[] {45, 40, 38, 47, 68, 62, 65, 66};
-		   double[] student9 = new double[] {38, 42, 35, 40, 54, 56, 63, 60};
-		   double[] student10 = new double[] {42, 39, 44, 45, 64, 68, 70, 62};
+		   double[] student1 = new double[] {30, 35, 22, 31, 45, 50, 52, 56};
+		   double[] student2 = new double[] {32, 36, 40, 42, 64, 55, 60, 54};
+		   double[] student3 = new double[] {27, 29, 32, 25, 40, 50, 60, 55};
+		   double[] student4 = new double[] {36, 41, 30, 33, 52, 50, 56, 54};
+		   double[] student5 = new double[] {15, 22, 28, 30, 40, 38, 44, 45};
+		   double[] student6 = new double[] {17, 22, 24, 30, 35, 33, 40, 44};
+		   double[] student7 = new double[] {35, 38, 32, 35, 65, 54, 49, 55};
+		   double[] student8 = new double[] {28, 30, 22, 32, 57, 52, 50, 55};
+		   double[] student9 = new double[] {21, 26, 32, 35, 45, 50, 53, 56};
+		   double[] student10 = new double[] {30, 32, 35, 28, 53, 56, 65, 57};
 		   
 		   double sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0, sum5 = 0,
 				   sum6 = 0, sum7 = 0, sum8 = 0, sum9 = 0, sum10 = 0;
@@ -146,16 +146,16 @@ public class Grade {
 		   System.out.println("Students 1 through 10 total scores and grades with curve:");
 		   
 		   for(int counter=0; counter<scoreArray.length; counter++) {
-			   if (scoreArray[counter] >= gradeAverage + (2*(standardDeviation))) {
+			   if (scoreArray[counter] >= gradeAverage + (standardDeviation)) {
 				   finalGrade = "A";
 			   }
-			   else if (scoreArray[counter] >= gradeAverage + (standardDeviation)) {
+			   else if (scoreArray[counter] >= gradeAverage + (standardDeviation/2)) {
 				   finalGrade = "B";
 			   }
 			   else if (scoreArray[counter] >= gradeAverage) {
 				   finalGrade = "C";
 			   }
-			   else if (scoreArray[counter] >= gradeAverage - (standardDeviation)) {
+			   else if (scoreArray[counter] >= gradeAverage - (standardDeviation/2)) {
 				   finalGrade = "D";
 			   }
 			   else {
